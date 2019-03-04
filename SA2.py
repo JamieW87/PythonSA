@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from flask import Flask
 import json
 
-SAapp = Flask("Sentwinel")
+SAapp = Flask(__name__)
 
 #Function that collects the percentages
 def percentage(part, whole):
@@ -68,8 +68,8 @@ def GetPlot (searchTerm, noOfSearchTerms):
     #Returns the polarity scores as JSON integers, for Android Studio
     return json.dumps({"positive":positive,"negative":negative,"neutral":neutral})
     
-
-SAapp.run()
+if __name__ == "main":
+    SAapp.run()
 
 #For in-python pie chart
     #labels = ['Positive [' + str(positive)+ '%]'], ['Neutral [' + str(neutral)+ '%]'], ['Negative [' + str(negative)+ '%]']
