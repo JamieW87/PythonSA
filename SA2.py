@@ -69,7 +69,7 @@ def GetPlot (searchTerm, noOfSearchTerms):
     return json.dumps({"positive":positive,"negative":negative,"neutral":neutral})
     
 
-app.run()
+SAapp.run()
 
 #For in-python pie chart
     #labels = ['Positive [' + str(positive)+ '%]'], ['Neutral [' + str(neutral)+ '%]'], ['Negative [' + str(negative)+ '%]']
