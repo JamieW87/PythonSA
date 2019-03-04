@@ -1,3 +1,4 @@
 OlderVs/
-.vscode/
+/.vscode/
+.DS_Store
 SAOriginal.py
