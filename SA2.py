@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from flask import Flask
 import json
 
-app = Flask("Sentwinel")
+SAapp = Flask("Sentwinel")
 
 #Function that collects the percentages
 def percentage(part, whole):
@@ -24,7 +24,7 @@ auth.set_access_token(accessToken, accessTokenSecret)
 api = tweepy.API(auth)
 
 #The function that gets the search terms and returns the SA
-@app.route("/<searchTerm>/<noOfSearchTerms>")
+@SAapp.route("/<searchTerm>/<noOfSearchTerms>")
 def GetPlot (searchTerm, noOfSearchTerms):
     noOfSearchTerms = int(noOfSearchTerms)
     tweets = tweepy.Cursor(api.search, q=searchTerm).items(noOfSearchTerms)

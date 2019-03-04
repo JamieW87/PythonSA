@@ -1,1 +1,1 @@
-web: gunicorn SA2
+web: gunicorn SA2:SAapp
