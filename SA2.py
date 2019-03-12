@@ -66,7 +66,7 @@ def GetPlot (searchTerm, noOfSearchTerms):
         print("Postitive")
     
     #Returns the polarity scores as JSON integers, for Android Studio
-    return json.dumps({"positive":positive,"negative":negative,"neutral":neutral})
+    return json.dumps([{"positive":positive,"negative":negative,"neutral":neutral}])
     
 if __name__ == "main":
     SAapp.run()
