@@ -13,10 +13,10 @@ def percentage(part, whole):
     return 100 * float(part)/float(whole)
 
 #Setting variables for the auth information that allows us to access twitters API
-consumerKey = "3DOvT3TjEgd16Yk7xvNxNjUMQ"
-consumerSecret = "DeMxglGqNdO9A1xwE8PfI4IMTPFnL6jAihxunsA45zlxfwW9bk"
-accessToken = "381544613-Zda1F8KbIZ0q1Eyz1azIpllKu9eimHaUkJNZpioa"
-accessTokenSecret = "GwtenTAoU3Bki2F1MvnbNRxm3XahX0O8vRx8eFqC8SVoR"
+consumerKey = os.environ.get('CONSUMER_KEY')
+consumerSecret = os.environ.get('CONSUMER_SECRET')
+accessToken = os.environ.get('ACCESS_TOKEN')
+accessTokenSecret = os.environ.get('ACCESS_TOKEN_SECRET')
 
 #Connects to the twitter API
 auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
